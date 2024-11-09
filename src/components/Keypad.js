@@ -1,8 +1,22 @@
-// Code Keypad Component Here
+import React, {useState} from "react";
+
 
 function Keypad (){
+    
+    const [password, setPassword] =useState("");
+
+    const handleInput = () => {
+        console.log("Entering password...")
+
+    }
     return (
-        <div></div>
+        <div>
+            <input type="password" value={password} placeholder="Enter password" onChange={(e) => {
+                setPassword(e.target.value);
+                handleInput(e);
+            }}/>
+
+        </div>
     )
 }
 
